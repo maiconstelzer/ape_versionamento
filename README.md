@@ -13,7 +13,7 @@ O versionamento de software é o processo de atribuir um nome ou numeração ún
 Um dos principais motivos de utilização do GIT para versionamento é sua ampla utilização em projetos   tanto proprietários como open-source, ou seja, querendo ou não você vai precisar se familiarizar com GIT, pelo fato de ser muito utilizado, são feitas melhorias e correções continuamente, mantendo-o com menos risco de BUG’s, além de que desenvolvedores já tem uma familiarização com o mesmo e isso permite uma fácil contratação de integrantes de equipe para seu projeto. Normalmente as IDE’s de desenvolvimento possuem extensões para fácil utilização do controle de versão GIT, um exemplo é o visual studio 2019, que no ínicio já apresenta um front-end para clone de projetos.
 
 #### 4. Quais as vantagens do Git?  
-
+Entre as principais vantagens da utilização do GIT, estão, rapidez (pelo fato dos processos serem operados localmente, deixa de ser preciso contatar o servidor para proceder operações como um commit, log ou diff), autonomia (permite trabalhar offline e em qualquer local, sendo necessário uma conexão com a rede para atualização e troca de revisões com outros repositórios), portabilidade (atualmente o GIT está disponível para BSD, SOLARIS, Darwin, Linux e Windows, permitindo desenvolvedores de diferentes sistemas operacionais trabalhar em um mesmo projeto ao mesmo tempo), branches (permite trabalhos individualizados sem atingir a principal versão do projeto, permitindo realizar melhorias ou correções totalmente diferentes ao mesmo tempo por desenvolvedores diferentes e sem que um atrapalhe o outro).
 
 #### 5. Qual a importância da utilização do controle de versionamento no desenvolvimento de um software?  
 

@@ -19,3 +19,12 @@ Entre as principais vantagens da utilização do GIT, estão, rapidez (pelo fato
 A importância da utilização do controle de versionamento no desenvolvimento de um software está ligada com o histórico de alterações, nenhum programa pode ser considerado 100% estável e pode ser necessário a volta para uma versão antiga, porém, imagine que você não lembre o motivo pelo qual o programa parou de realizar tal funcionalidade, onde você consultaria? Bem, ai está a importância de você ter um histórico de suas alterações e um controle de versão, isso mantém o programa mais sólido, pois mesmo que ocorra problemas com a última versão, você tem como consultar o motivo pelo qual parou de funcionar e em que versão o programa continua estável para ser utilizado.
 
 #### 6. Cite pelo menos três ferramentas de controle de versão e faça um breve detalhamento sobre cada uma delas.
+CVS – Concurrent Version System (Sistema de Versões Concorrentes)
+ É um sistema de versionamento que permite o trabalho com diversas versões de arquivos, sendo organizados em um diretório (local ou remotamente), mantém as versões antigas e os LOGs de quem e quando manipulou os arquivos. O CVS considera um projeto como um módulo, contendo uma hierarquia de diretórios e arquivos, um servidor CVS pode gerenciar diversos módulos, ele armazena todos os módulos em um repositório. Seu desenvolvimento foi baseado em uma versão anterior de um sistema chamado Revision Control System (RCS).
+
+SVN – Apache Subversion
+ É um sistema de versionamento desenhado especificamente para substituir o CVS por conta do mesmo possuir limitações, utilizava-se do banco de dados Berkeley BD, porém, o seu uso foi depreciado. O SVN é utilizado em grandes projetos como FreeBSD, Apache Software Foundation, Free Pascal e SourceForge, foi desenvolvido pela CollabNet em 2000 e atualmente é o projeto “top-level” da Apache Software Foundation e existem duas formas para armazenar o repositório, através de FSFS e FSX.
+
+Mercurial
+ É um sistema de versionamento multiplataforma, é implementado principalmente em Python e foi inicialmente foi escrito para sobre Linux. Seus principais objetivos são alta performance, escalabilidade, descentralização, desenvolvimento colaborativo distribuído, controle de arquivos e operações avançadas de branches + merges. Está sobre a versão 2 da licença GPL e é disponibilizado como Software Livre. Empresas como Facebook e Google fazem uso desta ferramenta para versionamento de projetos por conta de funcionar muito bem para equipes grandes.
+

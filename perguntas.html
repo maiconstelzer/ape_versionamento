@@ -2,23 +2,42 @@
 <html>
 	<head>
     	<meta charset="UTF-8">
-    	<title>Perguntas</title>
+    	<title>GIT - Perguntas e exemplos de comandos</title>
 	</head>
 
 	<body>
 	<h1>Para que serve o commit e qual a melhor forma de utilizá-lo?</h1>
 	<p>O commit é utilizado para confirmar suas alterações locais e adicionar uma mensagem que deve conter uma explicação do que foi alterado, quando gerado o commit, as confirmações estão apenas localmente, ou seja, no repositório nada foi alterado. A melhor forma de utilizar o commit segue a iniciativa de que a cada alteração relevante você faça uma confirmação, adicionando uma mensagem que explique com poucas palavras, tudo o que foi feito. Após todas as confirmações serem devidamente commitadas, é o momento de realização do “PUSH”, assim seu repositório vai receber todas as confirmações e as mensagens de explicação, mantendo assim, um grande histórico no projeto que poderá ser utilizado para verificar quando e porquê algo foi alterado e por quem está alteração foi feita.</p>
-
+	<p><i>Ex: git add --all && git commit -m "Adicionada nova funcionalidade".</i></p>
+	
+	<br>
 	<h1>Qual a diferença entre commit e push?</h1>
 	<p>Commit e PUSH são comandos diferentes, a explicação mais rápida é a de que o COMMIT cria uma confirmação das alterações LOCAIS (OFFLINE) e permite adicionar uma mensagem explicativa sobre elas, já o PUSH é responsável por enviar essas alterações para o repositório remoto, permitindo que outros integrantes utilizem as novas modificações após o (FETCH + PULL). O commit grava confirmações localmente, o desenvolvedor pode realizar quantos commits achar necessário antes de realizar o PUSH para que as alterações fiquem gravadas no respositório, está forma de trabalho é muito útil, principalmente em casos onde você está fazendo uma determinada atividade e você vai precisar trocar de atividade e utilizar a MASTER sem alterações, neste caso, você cria uma BRANCH com suas alterações, realiza o COMMIT delas e depois faz o PUSH para que está branch fique em seu repositório. O PUSH tem como principal função, enviar suas confirmações locais para o repositório, afim de mantê-lo atualizado e que outros integrantes da equipe tenham acesso as suas alterações apenas com a sincronia (FETCH + PULL), porém, toda a magia está no COMMIT, pois o mesmo permite que o desenvolvedor escreva uma mensagen e fragmente suas alterações, mantendo um histórico de quando, porquê e por quem foram feitas.</p>
-
+	<p><i>Após todos os commits, é necessário realizar o "git push", afim de atualizar o repositório com as alterações e mensagens.</i></p>
+	
+	<br>
 	<h1>O que é tag?</h1>
-	<p></p>
+	<p>Da mesma forma que a maioria das ferramentas de controle de versões, o Git tem a habilidade de desenvolver pontos específicos e importantes no histórico de alterações. Normalmente está funcionalidade é utilizada para marcação de pontos importantes no histórico do projeto e para manter de forma rápida, uma cópia com o código fonte ou instalador (se aplicação desktop). Digamos que você tenha um projeto que foi vendido a um cliente e de alguma forma a última versão lançada começou a apresentar muitas falhas e o software não funciona corretamente, neste caso, pode ser utiliza uma versão da TAG para envio ao cliente até que se encontre o problema real no projeto e proceda com seu ajuste.</p>
+	<p><i>Para criação de tag com uma mensagem é necessário rodar o comando "git tag", ex: git tag 1.0.0 -m "Versão 1.0.0", acaso não for necessário inserção de mensagem, favor retirar o "-m" e sua respectiva mensagem.</i></p>
 
+	<br>
 	<h1>O que é branch?</h1>
-	<p></p>
+	<p>Todas as ferramentas de controle de versões devem conter um sistema de branching, é a chave para que o trabalho em equipe ocorra sem muitas complicações em um projeto. O sistema de BRANCH do git é muito útil em projetos com equipe, cada desenvolvedor pode criar uma cópia da MASTER para realizar suas melhorias e correções em uma BRANCH e trabalhar com a mesma até realizar todos os testes necessários, sem que a MASTER fique comprometida por falhas que poderiam surgir a partir das novas modificações. O sistema de MERGE facilita a inserção das alterações do BRANCH na MASTER, porém, é muito importante o costume do desenvolvedor realizar a atualização de sua branch a partir da master, realizando o merge da mesma em sua BRANCH logo após o FETCH.</p>
+	<p><i>Para criação de uma branch é necessário rodar o commando "git branch", ex: "git branch TESTE" (cria uma branch com o nome "TESTE").</i></p>
+	<p><i><b>IMPORTANTE:</b> Acaso a branch esteja muito atrás da master, é necessário realizar sua atualização com as últimas alterações da master.</i></p>
 
+	<br>
 	<h1>Como resolver possíveis conflitos no GIT?</h1>
-	<p></p>
+	<p>Para resolver conflitos no GIT, antes de tudo é necessário ter paciência e lembrar que um descuido pode resultar em perda das alterações e retrabalho. O GIT possui uma ótima ferramenta de mesclagem de código fonte, existem vários cenários que podem resultar em conflitos no arquivo, um deles, ao fazer alterações direto na MASTER (sem antes ter atualizado com “git pull”), ao realizar merge da MASTER em uma BRANCH. Porém, é fácil identificar a localização do conflito e para resolver deve se estar atento nas palavras “HEAD” e “MASTER”, sendo HEAD as suas alterações LOCAIS e MASTER as alterações que foram feitas no repositório.</p>
+	<p>O GIT marca os conflitos no arquivo com a a seguinte syntax:</p>
+
+	<p><b><<<<<<< HEAD</b> <br>
+	Aqui está a sua alteração de código. <br>
+<b>=======</b> <br>
+	Aqui vai a alteração do seu amigo que o Git tentou mesclar <br>
+<b>>>>>>>> MASTER</b></p>
+
+	<p><i>Antes de resolver os conflitos é necessário primeiro a verificação com a equipe afim de entender o motivo da alteração (ou verificação no histórico), proceder com o ajuste e não esquesquecer de remover as TAG's acima, que foram geradas pela ferramenta de mesclagem do GIT.</i></p>
+	<p><i>Lembrando que o ideal é sempre manter atualizado seu repositório LOCAL, realizando “git pull” e “git fetch --all”, desta forma, é garantido que não terá tantos conflitos.</i></p>
 	</body>
 </html>

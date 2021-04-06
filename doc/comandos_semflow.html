@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GIT - Comandos sem uso do FLOW</title>
+    <style>
+		table {
+  		font-family: arial, sans-serif;
+  		border-collapse: collapse;
+  		width: 100%;
+		}
+
+		td, th {
+  		border: 1px solid #dddddd;
+  		text-align: left;
+		padding: 8px;
+		}
+
+		tr:nth-child(even) {
+  		background-color: #dddddd;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Funcionalidades</h1>
+	<p><i>A tabela abaixo mostra os principais comandos do git seguindo o fluxo base de uso</i></p>
+	<table>
+		<tr>
+			<th>Comando</th>
+			<th>Descrição</th>
+		</tr>
+		
+		<tr>
+			<td>git fetch --all</td>
+			<td>Este comando realiza a atualização de todas branches em seu repositório local, necessitando solicitar o git pull após seu uso, o prefixo "--all" determina que todas as branches locais e a MASTER seram atualizada com base no repositório remoto.</td>
+		</tr>
+
+		<tr>
+			<td>git pull</td>
+			<td>Este comando realiza a atualização dos arquivos no seu repositório local com base no repositório remoto, sempre lembrar de realizar ele antes de começar a trabalhar em uma branch ou na MASTER.</td>
+		</tr>
+
+		<tr>
+			<td>git add --all</td>
+			<td>Este comando é responsável por preparar suas alterações antes de um commit, o prefixo "--all" realiza a preparação de todas as alterações no repositório local.</td>
+		</tr>
+
+
+		<tr>
+			<td>git commit -m "Mensagem do commit"</td>
+			<td>Este comando realiza a confirmação de suas alterações (Previamente preparadas com "git add --all"), o prefixo "-m" determina a mensagem que sera adicionada junto ao commit (Lembrar de colocar uma mensagem que explique com poucas palavras o que foi feito no commit)</td>
+		</tr>
+
+		<tr>
+			<td>git push --tags</td>
+			<td>Este comando realiza o envio de seus commits locais para o repositório remoto, acaso for adicionado o prefixo "--tags", será atualizada apenas as tags locais com as tags do repositório.</td>
+		</tr>
+
+		<tr>
+			<td>git tag v1.0.0 -m "Versão 1.0.0"</td>
+			<td>Este comando cria uma TAG em seu repositório (Apenas localmente), o prefixo "-m" determina a mensagem da tag, porém, seu repositório remoto vai receber as tag's apenas quando realizar o "git push --tags".</td>
+		</tr>
+
+		<tr>
+			<td>git branch NomeBranch</td>
+			<td>Este comando cria uma branch chamada "NomeBranch" com base do seu repositório local (Onde foi executado o comando, ex: Se estiver com a MASTER, cria uma branch com base na MASTER e assim sucessivamente).</td>
+		</tr>
+
+		<tr>
+			<td>git branch --list</td>
+			<td>Este comando lista todas as branch's em seu repositório local/remoto</td>
+		</tr>
+
+		<tr>
+			<td>git branch --delete NomeBranch --set-upstream-to</td>
+			<td>Este comando deleta a branch "NomeBranch" tanto localmente como do repositório. (Cuidado) (Ao utilizar "-D" ao invés de "--delete" sera realizado o delete com "--force").</td>
+		</tr>
+
+		<tr>
+			<td>git checkout NomeBranch</td>
+			<td>Altera seu repositório local para branch "NomeBranch" e atualiza todos os arquivos, lembrar de utilizar git fetch + git pull para realizar a atualização do repositório local.</td>
+		</tr>
+	</table>
+
+</body>
+</html>

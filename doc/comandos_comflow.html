@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>GIT - Comandos com uso do FLOW</title>
+        <style>
+		table {
+  		font-family: arial, sans-serif;
+  		border-collapse: collapse;
+  		width: 100%;
+		}
+
+		td, th {
+  		border: 1px solid #dddddd;
+  		text-align: left;
+		padding: 8px;
+		}
+
+		tr:nth-child(even) {
+  		background-color: #dddddd;
+		}
+	</style>
+</head>
 </head>
 <body>
+	<h1>Comandos com o uso do FLOW</h1>
+	<p><i>A tabela abaixo mostra os principais comandos do git (com FLOW).</i></p>
+<table>
+		<tr>
+			<th>Comando</th>
+			<th>Descrição</th>
+		</tr>
+		<tr>
+			<td>git flow init</td>
+			<td>Este comando faz a inicialização dentro de um repositório git já existente.</td>
+		</tr>
+		<tr>
+			<td>git flow feature start Funcionalidade</td>
+			<td>Este comando cria uma nova branch com o nome "Funcionalidade" baseado na branch DEVELOP e faz o seu checkout automáticamente.</td>
+		</tr>
+		<tr>
+			<td>git flow feature finish Funcionalidade</td>
+			<td>Este comando realiza o merge da branch "Funcionalidade" na branch DEVELOP, remove a branch "Funcionalidade" e faz checkout da branch DEVELOP.</td>
+		</tr>
+		<tr>
+			<td>git flow feature publish Funcionalidade</td>
+			<td>Este comando realiza o push da branch "Funcionalidade" para o repositório remoto.</td>
+		</tr>
+		<tr>
+			<td>git flow feature pull Funcionalidade</td>
+			<td>Este comando realiza o pull da branch "Funcionalidade".</td>
+		</tr>
+		<tr>
+			<td>git flow release start VER [HASH]</td>
+			<td>Este comando cria uma branch da versão "VER" com base na branch DEVELOP, você pode opcionalmente fornecer um hash sha-1 do commit no lugar de "[HASH]".</td>
+		</tr>
+		<tr>
+			<td>git flow release publish VER</td>
+			<td>Este comando realiza a publicação da versão "VER".</td>
+		</tr>
+		<tr>
+			<td>git flow release track VER</td>
+			<td>Este comando é utilizado para verificar uma versão, no caso a versão "VER".</td>
+		</tr>
+		<tr>
+			<td>git flow release finish VER</td>
+			<td>Este comando mescla a branch "VER" na master, em seguida cria uma tag com nome "VER", mescla a branch "VER" de volta na branch "DEVELOP" e remove a branch "VER".</td>
+		</tr>
+		<tr>
+			<td>git flow hotfix start HOTF [BRANCHBASE]</td>
+			<td>Este comando marca "HOTF" como um novo hotfix, opcionalmente você pode especificar uma branch base em "[BRANCHBASE]".</td>
+		</tr>
+		<tr>
+			<td>git flow hotfix finish HOTF</td>
+			<td>Este comando finaliza o hotfix "HOTF", mesclando tanto na branch DEVELOP como na MASTER. O merge realizado na master recebe uma TAG.</td>
+		</tr>
+</table>
 
+	<h1>Observações</h1>
+	<p><i>É sensato publicar o branch da versão depois de criá-lo, para permitir commits de outros desenvolvedores!</i></p>
+	<p><i>Você pode continuar a usar o git e todos os comandos dele normalmente como você já conhece, o git flow é apenas uma coleção de ferramentas!</i></p>
+	<p><i>A funcionalidade 'support' continua no estágio beta, seu uso não é indicado!</i></p>
 </body>
 </html>
